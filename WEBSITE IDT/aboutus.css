@@ -1,0 +1,366 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: #f4f7fa;
+    color: #333333;
+}
+
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    background-color: #D428C3;
+    color: #ffffff;
+    padding: 15px 0px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0px auto; 
+    padding: 0px 50px; 
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+}
+
+.nav-links li {
+    position: relative;
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    font-weight: 600;
+    padding: 10px 0px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #a7d9ff;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1a2c42;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+    top: 100%;
+    left: 0px;
+}
+
+.dropdown-content a {
+    color: #ffffff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #2c4260;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #021338;
+    color: white;
+}
+
+.about-us-banner {
+    background: linear-gradient(#094AE2, #895ED0,#D428C3);
+    color: #fff;
+    text-align: center;
+    padding: 130px 20px;
+    margin-bottom: 40px;
+}
+
+.about-us-banner h1{
+    font-size: 50px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.about-us-banner p{
+    font-size: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+.get-2-know{
+    text-align: center;
+    padding: 50px 20px;
+    
+}
+
+.header1-title{
+    margin-bottom: 15px;
+    font-size: 50px;
+}
+
+.program-desc {
+     font-size: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+/*profile*/
+.profiles-hero {
+    background: linear-gradient(#094AE2, #895ED0,#D428C3);
+    color: #fff;
+    text-align: center;
+    padding: 130px 20px;
+    margin-bottom: 40px;
+}
+
+.profiles-hero h1 {
+    font-size: 50px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.profiles-hero p {
+    font-size: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+.profiles-grid {
+    padding: 20px 50px;
+    max-width: 1200px;
+    margin: 0 auto 60px auto;
+}
+
+.profiles-grid h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.profiles-grid h2::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background-color: #3498db; 
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.profile-container {
+     position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex; 
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+@media screen and (max-width: 1024px) {
+    .profile-container {
+        flex-wrap: wrap; 
+        justify-content: center; 
+        padding-top: 50px;
+    }
+
+    .profile-item {
+        width: 45%; 
+        margin-bottom: 40px; 
+    }
+
+    .profile-container::before { 
+        left: 20px;
+        right: 20px;
+        top: 25px; 
+        height: 4px;
+        width: calc(100% - 40px);
+    }
+
+    
+    .profile-item::after {
+        top: 15px; 
+    }
+}
+
+.profile-box {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    text-align: center;
+    flex: 1 1 calc(33.333% - 60px);
+    max-width: calc(33.333% - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.profile-box img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid #3498db; 
+}
+
+.profile-box h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.profile-box .linkedin-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #0077b5; 
+    font-weight: 600;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.profile-box .linkedin-link:hover {
+    color: #005582;
+}
+
+.profile-box .linkedin-link i {
+    font-size: 20px;
+}
+
+.profile-box p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+
+
+
+.abt-project {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 50px 20px;
+    background-color: #f4f7fa;
+}
+
+.abt-project-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    text-align: center;
+    max-width: 800px;
+    width: 100%; 
+    margin: 0 auto;
+    
+
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.abt-project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.h1-abt {
+    font-size: 50px;
+    margin-bottom: 15px;
+
+}
+
+
+.program-desc {
+    font-size: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+
+@media (max-width: 768px) {
+
+    
+    .abt-project {
+        padding: 30px 15px;
+    }
+
+    .abt-project-card {
+        padding: 20px;
+        max-width: 100%; 
+    }
+
+    .h1-abt {
+        font-size: 40px; 
+    }
+
+    .program-desc {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+
+
+    .h1-abt {
+        font-size: 32px;
+    }
+
+    .program-desc {
+        font-size: 14px;
+    }
+}
